@@ -1,0 +1,493 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>AFR Garage Sorteo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Work+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header class="site">
+  <div class="container">
+    <a class="brand" href="#top">
+      <img class="brand-logo" src="assets/logo.png" alt="AFR Garage" />
+    </a>
+    <nav class="links">
+      <a href="#packs">Packs &amp; chances</a>
+      <a href="#como-funciona">Cómo funciona</a>
+      <a href="#transparencia">Transparencia</a>
+      <a href="#detalle">Detalle del sorteo</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="pill-btn outline" href="#transparencia">Ganadores</a>
+      <a class="pill-btn" href="#packs">Mis números</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <!-- HERO -->
+  <section class="hero" style="border-top:none; padding-top:76px;">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Sorteo activo · AFR Garage</span>
+        <h1>
+          <span class="l1">Comprá tu pack,</span>
+          <span class="l2">sumá chances.</span>
+        </h1>
+        <p class="hero-sub">
+          Cada foto que sumás al Pack AFR Garage es una chance más para el sorteo de una
+          Jeep Cherokee. Cuantas más chances lleves, más probabilidades tenés de ganar.
+        </p>
+
+        <div class="feature-pills">
+          <span class="feature-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14" rx="0"/><path d="M3 7l9 6 9-6"/></svg>
+            Números al instante por email
+          </span>
+          <span class="feature-pill">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 3v12M7 10l5 5 5-5"/><path d="M4 18h16"/></svg>
+            Sorteo en vivo por Instagram
+          </span>
+        </div>
+
+        <div class="trust-bar">
+          <div class="trust-item">
+            <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14"/><path d="M3 7l9 6 9-6"/></svg></div>
+            <p><strong>Recibí tus números</strong>Al instante, en orden y por email apenas se aprueba el pago.</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M12 3v13"/><path d="M7 8l5-5 5 5"/><path d="M4 21h16"/></svg></div>
+            <p><strong>Subí tu comprobante</strong>Se valida por el chat de la web, sin vueltas.</p>
+          </div>
+          <div class="trust-item">
+            <div class="trust-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="4" y="4" width="16" height="12"/><circle cx="9" cy="9" r="1.5"/><path d="M4 15l4-4 3 3 5-5 4 4"/></svg></div>
+            <p><strong>Accedé a tu pack</strong>Las fotos quedan disponibles en tu panel al confirmarse.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-ticket">
+        <div class="hero-ticket-top">
+          <span class="stamp">Sorteo oficial</span>
+          <div class="car-stage">
+            <img class="car-photo" src="assets/jeep-cherokee.webp" alt="Jeep Cherokee, premio principal del sorteo" />
+          </div>
+          <p class="prize-label">Premio principal</p>
+          <p class="prize-name">Jeep Cherokee</p>
+        </div>
+
+        <div class="ticket-perf"></div>
+
+        <div class="countdown-block">
+          <div class="countdown-caption">
+            <span>Cierra en</span>
+            <b id="draw-date-label">—</b>
+          </div>
+          <div class="countdown" id="countdown" aria-live="polite">
+            <div class="cd-cell"><div class="cd-num" id="cd-days">00</div><div class="cd-unit">Días</div></div>
+            <div class="cd-cell"><div class="cd-num" id="cd-hours">00</div><div class="cd-unit">Hs</div></div>
+            <div class="cd-cell"><div class="cd-num" id="cd-mins">00</div><div class="cd-unit">Min</div></div>
+            <div class="cd-cell"><div class="cd-num" id="cd-secs">00</div><div class="cd-unit">Seg</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PACKS + CHANCES -->
+  <section id="packs">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Elegí tus chances</span>
+        <h2>Pack de Fotos AFR Garage</h2>
+        <p>Cada foto del pack suma una chance: un número único y no correlativo para el sorteo de la Jeep Cherokee, asignado apenas se confirma el pago.</p>
+      </div>
+
+      <div class="raffle-layout">
+        <div class="pack-card">
+          <span class="pack-tag">Pack digital</span>
+          <h3>Pack de Fotos AFR Garage</h3>
+          <p class="desc">Set de fotos en alta resolución, entrega inmediata por el panel + chances automáticas para el sorteo.</p>
+          <div class="stack-graphic">
+            <div class="photo"></div>
+            <div class="photo"></div>
+            <div class="photo"></div>
+          </div>
+          <ul class="pack-includes">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Descarga inmediata en tu panel</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Números aleatorios por email</li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M20 6L9 17l-5-5"/></svg> Válido para las 3 etapas del sorteo</li>
+          </ul>
+          <div class="draw-date">
+            <span>Fecha del sorteo</span>
+            <b>Sáb. 12 de septiembre · 21:00 hs</b>
+          </div>
+        </div>
+
+        <div>
+          <div class="chances-list" id="chances-list">
+            <label class="chance-row">
+              <input type="radio" name="chance-tier" class="chance-radio" data-tier="1 chance" data-price="$10.000" />
+              <span class="radio-dot"></span>
+              <span class="chance-main"><strong>1 chance</strong><span>para el sorteo · 1 foto</span></span>
+              <span class="chance-price">$10.000</span>
+              <span class="chance-cta">Elegir</span>
+            </label>
+            <label class="chance-row">
+              <input type="radio" name="chance-tier" class="chance-radio" data-tier="2 chances" data-price="$15.000" />
+              <span class="radio-dot"></span>
+              <span class="chance-main"><strong>2 chances</strong><span>para el sorteo · 2 fotos</span></span>
+              <span class="chance-price">$15.000</span>
+              <span class="chance-cta">Elegir</span>
+            </label>
+            <label class="chance-row">
+              <input type="radio" name="chance-tier" class="chance-radio" data-tier="4 chances" data-price="$25.000" />
+              <span class="radio-dot"></span>
+              <span class="chance-main"><strong>4 chances</strong><span>para el sorteo · 4 fotos</span></span>
+              <span class="chance-price">$25.000</span>
+              <span class="chance-cta">Elegir</span>
+            </label>
+            <label class="chance-row featured">
+              <input type="radio" name="chance-tier" class="chance-radio" data-tier="6 chances" data-price="$35.000" checked />
+              <span class="radio-dot"></span>
+              <span class="chance-main"><strong>6 chances</strong><span>para el sorteo · 6 fotos</span></span>
+              <span class="chance-price-col"><span class="chance-price">$35.000</span><span class="chance-note">3 cuotas sin interés</span></span>
+              <span class="chance-cta">Elegir</span>
+            </label>
+            <label class="chance-row">
+              <input type="radio" name="chance-tier" class="chance-radio" data-tier="10 chances" data-price="$45.000" />
+              <span class="radio-dot"></span>
+              <span class="chance-main"><strong>10 chances</strong><span>para el sorteo · 10 fotos</span></span>
+              <span class="chance-price-col"><span class="chance-price">$45.000</span><span class="chance-note">3 cuotas sin interés</span></span>
+              <span class="chance-cta">Elegir</span>
+            </label>
+            <label class="chance-row">
+              <input type="radio" name="chance-tier" class="chance-radio" data-tier="15 chances" data-price="$70.000" />
+              <span class="radio-dot"></span>
+              <span class="chance-main"><strong>15 chances</strong><span>para el sorteo · 15 fotos</span></span>
+              <span class="chance-price-col"><span class="chance-price">$70.000</span><span class="chance-note">3 cuotas sin interés</span></span>
+              <span class="chance-cta">Elegir</span>
+            </label>
+            <label class="chance-row">
+              <input type="radio" name="chance-tier" class="chance-radio" data-tier="20 chances" data-price="$90.000" />
+              <span class="radio-dot"></span>
+              <span class="chance-main"><strong>20 chances</strong><span>para el sorteo · 20 fotos</span></span>
+              <span class="chance-price-col"><span class="chance-price">$90.000</span><span class="chance-note">3 cuotas sin interés</span></span>
+              <span class="chance-cta">Elegir</span>
+            </label>
+            <label class="chance-row">
+              <input type="radio" name="chance-tier" class="chance-radio" data-tier="30 chances" data-price="$120.000" />
+              <span class="radio-dot"></span>
+              <span class="chance-main"><strong>30 chances</strong><span>para el sorteo · 30 fotos</span></span>
+              <span class="chance-price-col"><span class="chance-price">$120.000</span><span class="chance-note">3 cuotas sin interés</span></span>
+              <span class="chance-cta">Elegir</span>
+            </label>
+            <label class="chance-row">
+              <input type="radio" name="chance-tier" class="chance-radio" data-tier="50 chances" data-price="$150.000" />
+              <span class="radio-dot"></span>
+              <span class="chance-main"><strong>50 chances</strong><span>para el sorteo · 50 fotos</span></span>
+              <span class="chance-price-col"><span class="chance-price">$150.000</span><span class="chance-note">3 cuotas sin interés</span></span>
+              <span class="chance-cta">Elegir</span>
+            </label>
+            <label class="chance-row">
+              <input type="radio" name="chance-tier" class="chance-radio" data-tier="200 chances" data-price="$300.000" />
+              <span class="radio-dot"></span>
+              <span class="chance-main"><strong>200 chances</strong><span>para el sorteo · 200 fotos</span></span>
+              <span class="chance-price-col"><span class="chance-price">$300.000</span><span class="chance-note">3 cuotas sin interés</span></span>
+              <span class="chance-cta">Elegir</span>
+            </label>
+          </div>
+
+          <div class="main-cta-row">
+            <button class="main-cta" type="button" id="main-cta">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M6 3h15l-1.5 9h-13z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+              <span id="main-cta-text">Comprar 6 chances — $35.000</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="como-funciona">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Paso a paso</span>
+        <h2>Cómo funciona</h2>
+        <p>Participar lleva cuatro pasos, de la compra del pack a la entrega del premio en vivo.</p>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">01</span>
+          <h3>Elegí tus chances</h3>
+          <p>Seleccioná cuántas chances querés (cada una suma una foto al pack). Más chances, más probabilidades de ganar la Cherokee.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">02</span>
+          <h3>Transferí el pago</h3>
+          <p>Completá el checkout y subí el comprobante por el chat de la web.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">03</span>
+          <h3>Recibí tus números</h3>
+          <p>Confirmado el pago, te llegan tus números únicos por email al instante.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">04</span>
+          <h3>Mirá el sorteo en vivo</h3>
+          <p>El día del sorteo elegimos al ganador en vivo por Instagram. Puede ser tu número.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRANSPARENCY -->
+  <section id="transparencia">
+    <div class="container transparency-grid">
+      <div>
+        <span class="eyebrow">Reglas claras</span>
+        <h2 style="font-size:clamp(30px,4vw,40px); margin-top:10px;">Cómo se elige el ganador</h2>
+        <div class="trans-points" style="margin-top:28px;">
+          <div class="trans-point">
+            <span class="num">1</span>
+            <div>
+              <h4>Numeración aleatoria</h4>
+              <p>Cada chance (una foto) asigna un número único y no correlativo, generado automáticamente al confirmarse el pago.</p>
+            </div>
+          </div>
+          <div class="trans-point">
+            <span class="num">2</span>
+            <div>
+              <h4>Sorteo en vivo</h4>
+              <p>El ganador se define en una transmisión en vivo por Instagram, el mismo día publicado en esta página.</p>
+            </div>
+          </div>
+          <div class="trans-point">
+            <span class="num">3</span>
+            <div>
+              <h4>Entrega verificable</h4>
+              <p>Coordinamos la entrega del premio con el ganador y publicamos la confirmación en nuestras redes.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="winners-slot">
+        <div class="icon-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M8 21h8M12 17v4M7 4h10v4a5 5 0 01-10 0V4z"/><path d="M17 5h3a3 3 0 01-3 4M7 5H4a3 3 0 003 4"/></svg>
+        </div>
+        <h4>Acá van a aparecer los ganadores</h4>
+        <p>Después de cada sorteo publicamos nombre, ciudad y premio del ganador verificado, igual que en esta franja de ejemplo.</p>
+        <div class="ex-row">
+          <span>[ Nombre del ganador ]</span>
+          <span>[ Ciudad · fecha ]</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- DETAILS -->
+  <section id="detalle">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">Todo en un lugar</span>
+        <h2>Detalle del sorteo</h2>
+      </div>
+
+      <div class="details-grid">
+        <div class="detail-block">
+          <h3>Resumen de chances</h3>
+          <ul class="price-recap">
+            <li><span>1 chance — 1 foto</span><b>$10.000</b></li>
+            <li><span>2 chances — 2 fotos</span><b>$15.000</b></li>
+            <li><span>4 chances — 4 fotos</span><b>$25.000</b></li>
+            <li><span>6 chances — 6 fotos</span><b>$35.000</b></li>
+            <li><span>10 chances — 10 fotos</span><b>$45.000</b></li>
+            <li><span>15 chances — 15 fotos</span><b>$70.000</b></li>
+            <li><span>20 chances — 20 fotos</span><b>$90.000</b></li>
+            <li><span>30 chances — 30 fotos</span><b>$120.000</b></li>
+            <li><span>50 chances — 50 fotos</span><b>$150.000</b></li>
+            <li><span>200 chances — 200 fotos</span><b>$300.000</b></li>
+          </ul>
+
+          <div class="legal-box">
+            Sorteo válido solo para mayores de 18 años con residencia en Argentina. La compra digital
+            no es reembolsable una vez entregado el contenido. Participan únicamente pedidos pagos y
+            verificados. Reemplazá este texto con las bases y condiciones reales de tu sorteo.
+          </div>
+        </div>
+
+        <div class="detail-block">
+          <h3>Pago y validación</h3>
+          <div class="payment-row">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 21h18"/><path d="M4 21V10"/><path d="M20 21V10"/><path d="M2 10l10-6 10 6"/><path d="M8 21v-7"/><path d="M16 21v-7"/></svg>
+            <p>Transferencia bancaria<span>Sin recargo, para cualquier monto.</span></p>
+          </div>
+          <div class="payment-row" style="margin-top:16px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="2" y="6" width="20" height="13"/><path d="M2 10h20"/></svg>
+            <p>Tarjeta de crédito<span>Desde 6 chances ($35.000), pagás en 3 cuotas sin interés.</span></p>
+          </div>
+          <div class="payment-row" style="margin-top:16px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            <p>Comprobante por el chat<span>Nuestro equipo confirma tu participación a la brevedad.</span></p>
+          </div>
+          <div class="payment-row" style="margin-top:16px;">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14"/><path d="M3 7l9 6 9-6"/></svg>
+            <p>Números por email<span>Se envían automáticamente, en orden, al aprobarse el pago.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<section class="checkout-view" id="checkout-view" hidden>
+  <div class="container">
+    <button class="checkout-back" type="button" id="checkout-back">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Volver a los packs
+    </button>
+
+    <div class="checkout-card">
+      <div class="checkout-head">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M3 7h18l-1.5 12h-15z"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg>
+        <h2>Finalizar compra</h2>
+      </div>
+
+      <div class="checkout-order">
+        <div class="checkout-order-thumb">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><rect x="3" y="5" width="18" height="14"/><path d="M3 7l9 6 9-6"/></svg>
+        </div>
+        <div class="checkout-order-info">
+          <strong>Pack de Fotos AFR Garage</strong>
+          <span id="checkout-order-detail">6 chances para el sorteo · 6 fotos</span>
+        </div>
+        <div class="checkout-order-price" id="checkout-order-price">$35.000</div>
+      </div>
+
+      <form class="checkout-form" id="checkout-form">
+        <div class="field">
+          <label for="co-dni">DNI <span class="req">*</span></label>
+          <p class="hint">Lo vamos a usar para validar tu participación en el sorteo.</p>
+          <input type="text" id="co-dni" inputmode="numeric" placeholder="Tu número de DNI" required />
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="co-nombre">Nombre <span class="req">*</span></label>
+            <input type="text" id="co-nombre" placeholder="Tu nombre" required />
+          </div>
+          <div class="field">
+            <label for="co-apellido">Apellido <span class="req">*</span></label>
+            <input type="text" id="co-apellido" placeholder="Tu apellido" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="co-nacimiento">Fecha de nacimiento <span class="req">*</span></label>
+          <p class="hint">Debés ser mayor de 18 años para participar.</p>
+          <input type="text" id="co-nacimiento" placeholder="DD/MM/AAAA" required />
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="co-email">Email <span class="req">*</span></label>
+            <input type="email" id="co-email" placeholder="tu@email.com" required />
+          </div>
+          <div class="field">
+            <label for="co-whatsapp">WhatsApp <span class="req">*</span></label>
+            <input type="tel" id="co-whatsapp" placeholder="5491112345678" required />
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="co-direccion">Dirección <span class="req">*</span></label>
+          <input type="text" id="co-direccion" placeholder="Calle y número" required />
+        </div>
+
+        <div class="field-row cols-3">
+          <div class="field">
+            <label for="co-localidad">Localidad <span class="req">*</span></label>
+            <input type="text" id="co-localidad" placeholder="Ciudad" required />
+          </div>
+          <div class="field">
+            <label for="co-provincia">Provincia <span class="req">*</span></label>
+            <select id="co-provincia" required>
+              <option value="" selected disabled>Seleccionar</option>
+              <option>Buenos Aires</option>
+              <option>CABA</option>
+              <option>Catamarca</option>
+              <option>Chaco</option>
+              <option>Chubut</option>
+              <option>Córdoba</option>
+              <option>Corrientes</option>
+              <option>Entre Ríos</option>
+              <option>Formosa</option>
+              <option>Jujuy</option>
+              <option>La Pampa</option>
+              <option>La Rioja</option>
+              <option>Mendoza</option>
+              <option>Misiones</option>
+              <option>Neuquén</option>
+              <option>Río Negro</option>
+              <option>Salta</option>
+              <option>San Juan</option>
+              <option>San Luis</option>
+              <option>Santa Cruz</option>
+              <option>Santa Fe</option>
+              <option>Santiago del Estero</option>
+              <option>Tierra del Fuego</option>
+              <option>Tucumán</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="co-cp">Código postal <span class="req">*</span></label>
+            <input type="text" id="co-cp" placeholder="1234" required />
+          </div>
+        </div>
+
+        <hr class="checkout-divider" />
+
+        <div class="checkout-total">
+          <span>Total a pagar</span>
+          <b id="checkout-total-price">$35.000</b>
+        </div>
+
+        <button class="checkout-submit" type="submit">Confirmar pedido</button>
+
+        <div class="checkout-note" id="checkout-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+          <span>Esto es una maqueta de diseño: el formulario todavía no está conectado a un medio de pago real. Cuando integremos Mercado Pago, este botón va a llevar al checkout real.</span>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-row">
+      <div>
+        <img class="brand-logo footer-logo" src="assets/logo.png" alt="AFR Garage" />
+        <p class="fine">Sorteo Jeep Cherokee · Pack de Fotos AFR Garage. Página de referencia — reemplazá los textos legales y datos de pago por los reales de tu negocio antes de publicar.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#packs">Packs &amp; chances</a>
+        <a href="#transparencia">Transparencia</a>
+        <a href="#detalle">Bases y condiciones</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<button class="chat-fab" type="button" aria-label="Abrir chat">
+  <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+</button>
+<script src="script.js"></script>
+</body>
+</html>
